@@ -1,7 +1,7 @@
 {
-  "hash": "28942d3b5a1ee860aca9657c85c3d55e",
+  "hash": "35bb72b9c22de11dbd5a5e9f58acab2d",
   "result": {
-    "markdown": "---\ntitle: \"Ariel's Website\"\n---\n\n\nWelcome to my website!\n\n\n::: {.cell}\n\n```{.r .cell-code}\n1 + 1\n```\n\n::: {.cell-output .cell-output-stdout}\n```\n[1] 2\n```\n:::\n:::\n\n\n# Data Visualisation\n",
+    "markdown": "---\ntitle: \"Ariel's Website\"\n---\n\n\nHello, this is Ariel, a Year 1 undergraduate currently studying in NUS, taking the course NM2207 this semester. Welcome to my website!\n\nThe dataset I will be using is **Discovering Hidden Trends in Global Video Games: Platforms, Genres and Profitable Regions** by Andy Bramwell. Link below:\n\n<https://www.kaggle.com/datasets/thedevastator/discovering-hidden-trends-in-global-video-games>\n\n\n::: {.cell}\n\n```{.r .cell-code}\n1 + 1\n```\n\n::: {.cell-output .cell-output-stdout}\n```\n[1] 2\n```\n:::\n:::\n",
     "supporting": [],
     "filters": [
       "rmarkdown/pagebreak.lua"
