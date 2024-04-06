@@ -8,43 +8,53 @@
 #
 
 library(shiny)
+library(ggplot2)
+dataset <- read.csv("Video Games Sales.csv")
 
 # Define UI for application that draws a histogram
 ui <- fluidPage(
 
     # Application title
-    titlePanel("Old Faithful Geyser Data"),
+    titlePanel("Global Sales of Video Game Genres over Time"),
 
     # Sidebar with a slider input for number of bins 
     sidebarLayout(
         sidebarPanel(
-            sliderInput("bins",
-                        "Number of bins:",
-                        min = 1,
-                        max = 50,
-                        value = 30)
+            sliderInput(inputId = "range",
+                        label = "Range of Years Examined:",
+                        min = 1983,
+                        max = 2012,
+                        value = c(1983,2012)),
+            checkboxGroupInput(inputId = "options",
+                               label = "Select Genres to Examine from List:", 
+                               choices = unique(dataset$Genre),
+                               selected = unique(dataset$Genre))
         ),
 
         # Show a plot of the generated distribution
         mainPanel(
-           plotOutput("distPlot")
+           plotOutput("line")
         )
     )
 )
 
 # Define server logic required to draw a histogram
 server <- function(input, output) {
-
-    output$distPlot <- renderPlot({
-        # generate bins based on input$bins from ui.R
-        x    <- faithful[, 2]
-        bins <- seq(min(x), max(x), length.out = input$bins + 1)
-
-        # draw the histogram with the specified number of bins
-        hist(x, breaks = bins, col = 'darkgray', border = 'white',
-             xlab = 'Waiting time to next eruption (in mins)',
-             main = 'Histogram of waiting times')
-    })
+  output$line <- renderPlot({
+    # Filter dataset based on selected range of years
+    filtered_data <- subset(dataset, Year >= input$range[1] & Year <= input$range[2])
+    # Filter dataset based on selected genres
+    filtered_data <- filtered_data[filtered_data$Genre %in% input$options, ]
+    # Create line plot
+    ggplot(data = filtered_data,
+           aes(x = Year, y = Global, colour = Genre)) +
+      geom_line() +
+      labs(title = "Global Sales of each Genre over Time",
+           x = "Year", 
+           y = "Global Sales",
+           colour = "Genre") +
+      theme_minimal()
+  })
 }
 
 # Run the application 
