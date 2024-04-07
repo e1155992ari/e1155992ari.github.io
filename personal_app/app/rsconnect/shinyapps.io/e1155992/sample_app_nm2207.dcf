@@ -5,7 +5,7 @@ account: e1155992
 server: shinyapps.io
 hostUrl: https://api.shinyapps.io/v1
 appId: 11602940
-bundleId: 8462204
+bundleId: 8464451
 url: https://e1155992.shinyapps.io/sample_app_nm2207/
 version: 1
 asMultiple: FALSE

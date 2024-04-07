@@ -2,7 +2,7 @@
 title: "Ariel's Website"
 ---
 
-## What determines a successful video game in the video game industry?
+## How can video game developers draw in more success for their games?
 
 To answer this question, I will be using data visualisations from the following dataset: **Discovering Hidden Trends in Global Video Games: Platforms, Genres and Profitable Regions** by Andy Bramwell. Link: <https://www.kaggle.com/datasets/thedevastator/discovering-hidden-trends-in-global-video-games>
 
@@ -11,15 +11,18 @@ To answer this question, I will be using data visualisations from the following 
 ```
 
 ### Analysis 1: 
-This analysis tracks the sales/copies of games sold by genre over time, allowing for not only an individual analysis of each genre over a selected period of time, but also for comparisons across genres.
+This analysis is meant to analyse how the genre classification of a game may contribute to its sales/the number of copies sold, which would determine how well a game performs in the video game industry after release. Specifically, this Shiny visualisation tracks the sales/copies of games sold by genre over time, allowing for not only an individual analysis of each genre over a selected period of time, but also for comparisons across genres.
 
 Some key observations:
-1. Genres such as **Sports** and **Racing** became increasingly popular over time, as noted by the relative height of their peaks being much higher than other games 
-2. Genres such as **Platform** was much more popular back in the day, though its success and popularity has since declined, as seen from the downwards trend.
-   
-There are a number of reasons why certain video game genres may become more popular while others may stall. Some possible explanations include:
 
-Changes in consumer preferences: Consumer preferences can change over time, and certain genres may become more or less popular as a result.
+     1. Genres such as **Sports** and **Racing** became increasingly popular over time, as noted by the relative height of their peaks being much higher than other games. Interestingly, the sales of **Sports** was much, much higher in recent years as compared to other genres in 2006, despite the number of copies being sold in total being rather low.
 
-Changes in technology: The capabilities of gaming technology can also influence the popularity of different genres. For example, the increasing realism and immersion of consoles may make certain genres, such as adventure games or shooters, more appealing to players.
-
+    2. Genres such as **Platform** were much more popular back in the day, as noted by how in the earlier time frame it registered more sales than all other games.
+    
+    3. Some genres, such as **Strategy** generated consistently low sales over time as compared to other genres.
+    
+    4. Overall, however, there seems to be not much of a clear, visible relationship that can be inferred between a game's genre and its sales.
+    
+    5. That said, when navigating over to the visualisation option that allows for a look at how genres have been performing over time with regards to the number of copies sold, there is a visible increasing trend overall for all genres.
+    
+This analysis, therefore, suggests that genre does play a role in determining how successful a game in the industry. If developers are looking to tap into more niche genres of games, they may therefore want to consider incorporating other more popular general genres (e.g. Platform/Simulation/Role-Playing) into these niche genres to potentially draw in more sales and copies sold.
