@@ -2,12 +2,24 @@
 title: "Ariel's Website"
 ---
 
-Hello, this is Ariel, a Year 1 undergraduate currently studying in NUS, taking the course NM2207 this semester. Welcome to my website!
+## What determines a successful video game in the video game industry?
 
-The dataset I will be using is **Discovering Hidden Trends in Global Video Games: Platforms, Genres and Profitable Regions** by Andy Bramwell. Link below:
-
-<https://www.kaggle.com/datasets/thedevastator/discovering-hidden-trends-in-global-video-games>
+To answer this question, I will be using data visualisations from the following dataset: **Discovering Hidden Trends in Global Video Games: Platforms, Genres and Profitable Regions** by Andy Bramwell. Link: <https://www.kaggle.com/datasets/thedevastator/discovering-hidden-trends-in-global-video-games>
 
 ```{=html}
 <iframe height="400" width="100%" frameborder="no" src="https://e1155992.shinyapps.io/sample_app_nm2207/"> </iframe>
 ```
+
+### Analysis 1: 
+This analysis tracks the sales/copies of games sold by genre over time, allowing for not only an individual analysis of each genre over a selected period of time, but also for comparisons across genres.
+
+Some key observations:
+1. Genres such as **Sports** and **Racing** became increasingly popular over time, as noted by the relative height of their peaks being much higher than other games 
+2. Genres such as **Platform** was much more popular back in the day, though its success and popularity has since declined, as seen from the downwards trend.
+   
+There are a number of reasons why certain video game genres may become more popular while others may stall. Some possible explanations include:
+
+Changes in consumer preferences: Consumer preferences can change over time, and certain genres may become more or less popular as a result.
+
+Changes in technology: The capabilities of gaming technology can also influence the popularity of different genres. For example, the increasing realism and immersion of consoles may make certain genres, such as adventure games or shooters, more appealing to players.
+

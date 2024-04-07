@@ -4,13 +4,20 @@
     "href": "index.html",
     "title": "Ariel’s Website",
     "section": "",
-    "text": "Hello, this is Ariel, a Year 1 undergraduate currently studying in NUS, taking the course NM2207 this semester. Welcome to my website!\nThe dataset I will be using is Discovering Hidden Trends in Global Video Games: Platforms, Genres and Profitable Regions by Andy Bramwell. Link below:\nhttps://www.kaggle.com/datasets/thedevastator/discovering-hidden-trends-in-global-video-games"
+    "text": "To answer this question, I will be using data visualisations from the following dataset: Discovering Hidden Trends in Global Video Games: Platforms, Genres and Profitable Regions by Andy Bramwell. Link: https://www.kaggle.com/datasets/thedevastator/discovering-hidden-trends-in-global-video-games\n \n\n\nThis analysis tracks the sales/copies of games sold by genre over time, allowing for not only an individual analysis of each genre over a selected period of time, but also for comparisons across genres.\nSome key observations: 1. Genres such as Sports and Racing became increasingly popular over time, as noted by the relative height of their peaks being much higher than other games 2. Genres such as Platform was much more popular back in the day, though its success and popularity has since declined, as seen from the downwards trend.\nThere are a number of reasons why certain video game genres may become more popular while others may stall. Some possible explanations include:\nChanges in consumer preferences: Consumer preferences can change over time, and certain genres may become more or less popular as a result.\nChanges in technology: The capabilities of gaming technology can also influence the popularity of different genres. For example, the increasing realism and immersion of consoles may make certain genres, such as adventure games or shooters, more appealing to players."
   },
   {
     "objectID": "about.html",
     "href": "about.html",
-    "title": "About",
+    "title": "About Me",
     "section": "",
-    "text": "About this site\n\n1 + 1\n\n[1] 2"
+    "text": "Hello, this is Ariel, a Year 1 undergraduate currently studying in NUS, taking the course NM2207 this semester. Welcome to my website, which documents my progress for NM2207’s final project! :)"
+  },
+  {
+    "objectID": "index.html#what-determines-a-successful-video-game-in-the-video-game-industry",
+    "href": "index.html#what-determines-a-successful-video-game-in-the-video-game-industry",
+    "title": "Ariel’s Website",
+    "section": "",
+    "text": "To answer this question, I will be using data visualisations from the following dataset: Discovering Hidden Trends in Global Video Games: Platforms, Genres and Profitable Regions by Andy Bramwell. Link: https://www.kaggle.com/datasets/thedevastator/discovering-hidden-trends-in-global-video-games\n \n\n\nThis analysis tracks the sales/copies of games sold by genre over time, allowing for not only an individual analysis of each genre over a selected period of time, but also for comparisons across genres.\nSome key observations: 1. Genres such as Sports and Racing became increasingly popular over time, as noted by the relative height of their peaks being much higher than other games 2. Genres such as Platform was much more popular back in the day, though its success and popularity has since declined, as seen from the downwards trend.\nThere are a number of reasons why certain video game genres may become more popular while others may stall. Some possible explanations include:\nChanges in consumer preferences: Consumer preferences can change over time, and certain genres may become more or less popular as a result.\nChanges in technology: The capabilities of gaming technology can also influence the popularity of different genres. For example, the increasing realism and immersion of consoles may make certain genres, such as adventure games or shooters, more appealing to players."
   }
 ]

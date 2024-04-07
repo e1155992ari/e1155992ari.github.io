@@ -1,9 +1,5 @@
 ---
-title: "About"
+title: "About Me"
 ---
 
-About this site
-
-```{r}
-1 + 1
-```
+Hello, this is Ariel, a Year 1 undergraduate currently studying in NUS, taking the course NM2207 this semester. Welcome to my website, which documents my progress for NM2207's final project! :)
