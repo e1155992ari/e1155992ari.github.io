@@ -26,3 +26,27 @@ Some key observations:
 5.  That said, when navigating over to the visualisation option that allows for a look at how genres have been performing over time with regards to the number of copies sold, there is a visible increasing trend overall for all genres.
 
 This analysis, therefore, suggests that genre does play a role in determining how successful a game in the industry. If developers are looking to tap into more niche genres of games, they may therefore want to consider incorporating other more popular general genres (e.g. Platform/Simulation/Role-Playing) into these niche genres to potentially draw in more sales and copies sold.
+
+### Analysis 2:
+
+This analysis is meant to analyse how regions contribute to the sales of games across time, through a stacked bar plot which allows for easy comparison amongst the 4 regions identified in the dataset (North America, Japan, Europe, and Rest of the World), which are all expressed as a proportion of Global. The time period under study can be selected through the sidebar range controls in the sidebar panel.
+
+Some key observations:
+
+1.  In general, in order of proportion ranking: North America, Europe, Rest of World/Japan.
+
+2.  Sales over time increased in general as the years passed, as can be seen from the gradual increase in the height of the stacked bar plots towards the right.
+
+This analysis, therefore, suggests that North America contributes generally the most to sales when it comes to games, followed by Europe, then Rest of World/Japan. So when making games with the intention to sell well, they will need to make sure they appeal to the North American/European market especially, since they make up a majority of their sales; examples would include paying close attention to the types of games, or the kinds of characters and stories that are especially popular with North Americans or Europeans.
+
+### Analysis 3:
+
+This analysis is meant to analyse whether an association exists between years and number of games sold, which is done through a scatterplot that plots the ranks of games against the year (game rank is used to substitute for unique count.) Again, the time period studied can be varied through the slider input in the side panel.
+
+Some key observations:
+
+1.  As seen from the upwards sloping regression line for the scatterplot, there does exist a positive association.
+
+2.  There is a higher density of points towards the right side of the graph as compared to the left side, suggesting that the number of games released has indeed increased over time.
+
+This analysis, therefore, suggests that as time passes, game developers can expect to see more competition as a larger and larger variety of game titles are being put out, and the game market evolves to accommodate changing preferences or trends. Therefore, if they want to make successful games, they must ensure that there is an element to the game that sets it from competitors especially during launch year in order to net more sales from the industry market.

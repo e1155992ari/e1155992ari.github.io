@@ -1,12 +1,3 @@
-#
-# This is a Shiny web application. You can run the application by clicking
-# the 'Run App' button above.
-#
-# Find out more about building applications with Shiny here:
-#
-#    https://shiny.posit.co/
-#
-
 library(shiny)
 library(dplyr)
 library(ggplot2)
@@ -16,8 +7,13 @@ dataset <- read.csv("Video Games Sales.csv")
 ui <- fluidPage(
 
     # Application title
-    titlePanel("Global Sales/Count of Video Game Genres over Time"),
-
+    titlePanel("Data Analyses to Answer the Question"),
+    
+    # Tabset Panel
+    tabsetPanel(
+    
+    # 1st Page (Analysis 1)
+    tabPanel("Analysis 1",
     # Sidebar with a slider input for number of bins 
     sidebarLayout(
         sidebarPanel(
@@ -38,10 +34,53 @@ ui <- fluidPage(
         # Show a plot of the generated distribution
         mainPanel(
            plotOutput("line"),
-           h5("This visualisation helps with examining, through a line graph, not only the trend of sales/number of copies sold for each video game genre, but also a comparison of sales/number of copies sold among genres against time.")
+           h5("This visualisation helps with examining, through a line graph, not only the trend of sales/number of copies sold for each video game genre, but also a comparison of sales/number of copies sold among genres against time. This will help in uncovering how well each game genre has performed over time in terms of popularity among gamers against each other, so that developers know what kind of games appeal the most to the crowd, and study the changes in consumer preferences as well.")
         )
     )
+),
+
+  # 2nd Page (Analysis 2)
+  tabPanel("Analysis 2",
+           # Sidebar with a slider input for number of bins 
+           sidebarLayout(
+             sidebarPanel(
+               sliderInput(inputId = "range2",
+                           label = "Range of Years Examined:",
+                           min = 1983,
+                           max = 2012,
+                           value = c(1983,2012))
+             ),
+             
+             # Show a plot of the generated distribution
+             mainPanel(
+               plotOutput("stackedbar"),
+               h5("This visualisation compare Year against Global, with comparisons among regions like North America, Europe, Japan and others as the focus this time. Stacked bar charts, where each region is expressed as a percentage of the total contribution will be helpful in visualising which regions contribute the most amount of sales for games in comparison to each other.")
+             )
+           )
+  ),
+
+# 3rd Page (Analysis 3)
+tabPanel("Analysis 3",
+         # Sidebar with a slider input for number of bins 
+         sidebarLayout(
+           sidebarPanel(
+             sliderInput(inputId = "range3",
+                         label = "Range of Years Examined:",
+                         min = 1983,
+                         max = 2012,
+                         value = c(1983,2012))
+           ),
+           
+           # Show a plot of the generated distribution
+           mainPanel(
+             plotOutput("scatterplot"),
+             h5("This visualisation compares Year against Rank since both these variables are numerical variables, and using a scatterplot to visualise the trend can help with finding out if there exists an association between year and global sales generated. Investigating the association can then help with determining if time context indeed contributes to sales or not, and help developers be more cognizant of influences changing the times the game industry is in, so that they can take advantages of certain major developments to maximise their sales.")
+           )
+         )
 )
+
+))
+
 
 # Define server logic required to draw a histogram
 server <- function(input, output) {
@@ -78,6 +117,67 @@ server <- function(input, output) {
         theme_minimal()
     }
   })
+  
+  # Define server logic for Analysis #2
+  output$stackedbar <- renderPlot({
+    # Filter data based on selected range of years
+    filtered_df <- dataset %>%
+      filter(Year >= input$range2[1] & Year <= input$range2[2])
+    
+    # Group data by year and calculate the total sales for each region
+    
+    japan_df <- filtered_df %>%
+      group_by(Year) %>%
+      summarise(sum = sum(Japan)) %>%
+      mutate(Region = "Japan")
+    
+    na_df <- filtered_df %>%
+      group_by(Year) %>%
+      summarise(sum = sum(North_America)) %>%
+      mutate(Region = "North America")
+    
+    europe_df <- filtered_df %>%
+      group_by(Year) %>%
+      summarise(sum = sum(Europe)) %>%
+      mutate(Region = "Europe")
+    
+    row_df <- filtered_df %>%
+      group_by(Year) %>%
+      summarise(sum = sum(Rest_of_World)) %>%
+      mutate(Region = "Rest of World")
+    
+    # Combine dataframes into one
+    bar_chart_df <- bind_rows(japan_df, na_df, europe_df, row_df)
+    
+    # Plot bar chart
+    ggplot(bar_chart_df, aes(x = Year, y = sum, fill = Region)) +
+      geom_bar(stat = "identity") +
+      labs(
+        title = "Regional Sales over Time",
+        x = "Year",
+        y = "Sales",
+        fill = "Region"
+      ) +
+      theme_minimal()
+  })
+  
+  # Define server logic for Analysis #3
+  output$scatterplot <- renderPlot({
+    # Filter data based on selected range of years
+    filtered_df <- dataset %>%
+      filter(Year >= input$range3[1] & Year <= input$range3[2])
+    
+    # Create scatter plot
+    ggplot(filtered_df, aes(x = Year, y = Rank)) +
+      geom_point() +
+      geom_smooth(method = "lm", se = FALSE) +  # Add linear trend line
+      labs(
+        title = "Rank vs Year",
+        x = "Year",
+        y = "Rank"
+      )
+  })
+  
 }
 
 
